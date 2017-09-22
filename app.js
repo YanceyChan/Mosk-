@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var mockdata = require('./routes/mockdata');
 var cweb = require('./routes/cweb');
+var payuatpweb = require('./routes/payuat-pweb');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/mockdata', mockdata); 
 app.use('/cweb', cweb);
+app.use('/payuat-pweb', payuatpweb);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
