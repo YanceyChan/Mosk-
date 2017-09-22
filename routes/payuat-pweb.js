@@ -2,6 +2,7 @@ let Mock = require('mockjs');
 let express = require('express');
 let router = express.Router();
 
+//放弃贷款原因列表
 router.all('/QueryGiveUpReason.do', (req, res) => {
     res.json(Mock.mock({
         "_RejCode": "000000",
@@ -12,6 +13,7 @@ router.all('/QueryGiveUpReason.do', (req, res) => {
     }));
 });
 
+//银行卡列表
 router.all('/BankBindListQuery.do', (req, res) => {
     res.json(Mock.mock({
         "List|0-6": [{
@@ -76,6 +78,7 @@ router.all('/BankBindListQuery.do', (req, res) => {
     }));
 });
 
+//商品详情
 router.all('/MerHotPrdDetailQry.do', (req, res) => {
     res.json(Mock.mock({
         "PrdTotalPrice" : "@integer(100,10000)",
