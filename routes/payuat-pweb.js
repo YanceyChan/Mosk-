@@ -114,4 +114,15 @@ router.all('/MerHotPrdDetailQry.do', (req, res) => {
     }));
 });
 
+router.all('/test', (req, res) => {
+    res.json(Mock.mock({
+        "_RejCode": "000000",
+        "List|1-9": [{
+            "ReasonId|+1": 100,
+            "ReasonDesc": '@cword(10,20)',
+        }]
+    }));
+})
+
+
 module.exports = router;

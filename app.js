@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var mockdata = require('./routes/mockdata');
-var cweb = require('./routes/cweb');
 var payuatpweb = require('./routes/payuat-pweb');
+var newApp = require('./routes/newApp');
 
 var app = express();
 
@@ -28,8 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/mockdata', mockdata); 
-app.use('/cweb', cweb);
 app.use('/payuat-pweb', payuatpweb);
+app.use('/app', newApp)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
