@@ -5,9 +5,10 @@ let router = express.Router();
 router.all('/deviceRecords', (req, res) => {
     res.json(Mock.mock({
         "_RejCode": "000000",
-        "List|1-9": [{
-            "ReasonId|+1": 100,
-            "ReasonDesc": '@cword(10,20)',
+        "List|1-20": [{
+            "DeviceName" : '@cword(5,10)',
+            "LoginDate": '@date()',
+            "LoginTime": '@time()'
         }]
     }));
 })
